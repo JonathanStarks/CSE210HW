@@ -23,5 +23,7 @@ class Program
             total += number;
         }
         Console.WriteLine(total);
+
+        
     }
 }
