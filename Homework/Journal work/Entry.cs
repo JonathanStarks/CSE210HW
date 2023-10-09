@@ -38,7 +38,7 @@ public class Entry {
             Console.Write($"Please type your entry:");
 
             // Saves the entry to a varyable
-            string thisEntry = Console.ReadLine();
+            string thisEntry = Console.ReadLine() ?? string.Empty;
 
             // If the user types yes, the journal entry will be saved to the entry list
             Console.Write($"Save this journal entry? (yes/no): ");
@@ -47,7 +47,7 @@ public class Entry {
             {
                 using (StreamWriter outputFile = new StreamWriter("myFile.txt"))
                 {
-                    string fileName = "myFile.txt";
+                    string fileName = "myFile.txt" ?? string.Empty;
                     outputFile.WriteLine($"{DateTime.Now} {thisEntry}");
                 }
                 Console.WriteLine("Entry saved.");
@@ -66,7 +66,7 @@ public class Entry {
             Console.Write($"Please type your entry:");
 
             // Saves the entry to a varyable
-            string thisEntry = Console.ReadLine();
+            string thisEntry = Console.ReadLine() ?? string.Empty;
 
             // If the user types yes, the journal entry will be saved to the entry list
             Console.Write($"Save this journal entry? (yes/no): ");
@@ -75,7 +75,7 @@ public class Entry {
             {
                 using (StreamWriter outputFile = new StreamWriter("myFile.txt"))
                 {
-                    string fileName = "myFile.txt";
+                    string fileName = "myFile.txt" ?? string.Empty;
                     outputFile.WriteLine($"{DateTime.Now} {thisEntry}");
                 }
                 Console.WriteLine("Entry saved.");
