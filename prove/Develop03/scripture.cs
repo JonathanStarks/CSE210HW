@@ -17,14 +17,14 @@ public class Scripture {
     }
 
     // Randomly chooses a word to be used in the Hide method
-    public void HideWords()
+    public static void HideWords()
     {
         Random randomNumber = new Random();
-        Int32 listLength = _scripture.Count;
+        int listLength = _scripture.Count;
         //int thisManyTimes = randomNumber.Next(5);
         for (randomNumber.Next(5);;)
         {
-            _scripture = new _scripture.Replace(_scripture.IndexOf(null, randomNumber.Next(listLength)), "_");
+            _scripture = List<Word> _scripture.Replace(_scripture.IndexOf(null, randomNumber.Next(listLength)), "_");
 
         }
         

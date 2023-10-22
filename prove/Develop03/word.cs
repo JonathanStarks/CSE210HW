@@ -43,7 +43,7 @@ public class Word {
             }
             else if (answer == "2")
             {
-                
+                Scripture.HideWords();
             }
             else
             {
