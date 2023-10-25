@@ -4,6 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Learning02 World!");
+        Dvd movie = new Dvd("Star Wars: A New Hope");
+
+        //movie.Display();
+        movie.CheckOut();
+        movie.Display();
+
+        Book novel = new Book("The Lord Of The Rings", "Yes", 1234);
+        novel.Display();
     }
 }
