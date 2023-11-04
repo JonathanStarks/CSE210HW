@@ -12,8 +12,8 @@ public class Referance {
         _verse = verse;
     }
     
-    public void Display(){
-        Console.WriteLine($"{_book} {_chapter}:{_verse}");
-        
+    public string Display()
+    {
+        return ($"{_book} {_chapter}:{_verse}");    
     }
 }
