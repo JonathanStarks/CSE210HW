@@ -22,7 +22,6 @@ public class Breathe : Menu
     public void BreatheIn()
     {
         Console.Clear();
-        _time = _time / 4;
         Console.Write($"Breathe in ");
         TimerAnimation();
         Console.Clear();
@@ -34,14 +33,18 @@ public class Breathe : Menu
         Console.Clear();
         Console.Write($"Breathe out ");
         TimerAnimation();
+        Console.Clear();
 
     }
 
     public void BreathingInstructions()
     {
         StartingMessage();
+        Console.WriteLine();
         Console.WriteLine(_description);
+        Console.WriteLine();
         SetTime();
         BreatheIn();
+        
     }
 }
