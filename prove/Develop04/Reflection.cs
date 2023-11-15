@@ -1,6 +1,8 @@
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Security.Cryptography;
+using System.Xml.Serialization;
 
 public class Reflection : Menu
 {
@@ -57,18 +59,17 @@ public class Reflection : Menu
         // What I want this to do is to have this section run as long as there is still time left.
         // Make two datetime varyables, one that is now and one that is now + _time, at the end of each loop update the now datetime, the loop should keep going as long as the
         // now datetime is less than the future datetime.
-        TimeOnly StartingTime = new TimeOnly();
-        TimeOnly length = new TimeOnly(_time);
-        TimeOnly FutureTime = length + StartingTime;
         int i = 0;
-        while (StartingTime <= FutureTime)
+        // get time divide by how long we want to prompt them
+        // assuming 5 seconds per each
+        int j = GetTime()/5;
+        Overridetime(5);
+        while (j > 0)
         {
-            Console.Clear();
             Console.WriteLine(_followUpPrompts[i]);
-
-            Console.Write("Answer question here: ");
+            TimerAnimation();
+            j--;
             i++;
-            TimeOnly StartingTime = new TimeOnly();
         }
     }
     public void ReflectionInstructions()
@@ -76,6 +77,6 @@ public class Reflection : Menu
         StartingMessage();
         Console.WriteLine(_description);
         SetTime();
-        TimerAnimation();
+        GoThroughFollowUps();
     }
 }

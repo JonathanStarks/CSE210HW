@@ -8,6 +8,23 @@ public class Listen : Menu
 
     int _time;
 
+    List<string> _prompts = new List<string>()
+    {
+        "Who are people that you appreciate?",
+        "What are personal strengths of yours?",
+        "Who are people that you have helped this week?",
+        "When have you felt the Holy Ghost this month?",
+        "Who are some of your personal heroes?"
+    };
+
+    public void RandomPrompt()
+    {
+        Random randomNumber = new Random();
+        int index = (int) randomNumber.Next(0, 3);
+        string prompt = _prompts[index];
+        Console.WriteLine(prompt);
+    }
+
     public Listen(string name, string description, int time) : base(name, description, time)
     {
         _name = name;
@@ -22,6 +39,18 @@ public class Listen : Menu
         StartingMessage();
         Console.WriteLine(_description);
         SetTime();
+        RandomPrompt();
+        DateTime StartingTime = DateTime.Now;
+        DateTime CurrentTime = DateTime.Now;
+        //TimeOnly length = new TimeOnly(_time);
+        DateTime FutureTime = StartingTime.AddSeconds(_time);
+        int i = 0;
+        while (CurrentTime < FutureTime)
+        {
+            Console.Write("Answer question here: ");
+            i++;
+            CurrentTime = DateTime.Now;
+        }
         TimerAnimation();
     }
 }

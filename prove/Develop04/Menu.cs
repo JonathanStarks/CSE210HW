@@ -37,6 +37,15 @@ public class Menu
         Console.WriteLine($"Welcome to the {_name} activity!");
     }
 
+    public int GetTime()
+    {
+        return _time;
+    }
+    public void Overridetime(int time)
+    {
+        _time = time;
+    }
+
     public void EndingMessage()
     {
         Console.WriteLine("Thank you for using this program, good bye.");
