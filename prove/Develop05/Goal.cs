@@ -75,7 +75,7 @@ public class Goal
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
             //Something will go here that will change the amount of points added based on what goal is done
-            outputFile.WriteLine($"{_points},");
+            outputFile.WriteLine($"{_points}, ", FileMode.Append);
         }
     }
 
@@ -83,14 +83,20 @@ public class Goal
     {
         string filename = "myFile.txt";
         string[] lines = System.IO.File.ReadAllLines(filename);
+        string justWork = File.ReadAllText(filename);
 
         foreach (string line in lines)
         {
             string[] parts = line.Split(",");
 
-            string firstName = parts[0];
-            string lastName = parts[1];
+            Console.WriteLine(parts);
+
         }
+
+        Console.WriteLine(justWork);
+
+        Console.WriteLine("Press enter to continue.");
+        Console.ReadLine();
     }
 
 

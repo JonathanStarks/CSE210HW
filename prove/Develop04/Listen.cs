@@ -1,12 +1,12 @@
 public class Listen : Menu
 {
-    string _name;
+    //string _name;
     // = "listening";
 
     string _description;
     // = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
 
-    int _time;
+    //int _time;
 
     List<string> _prompts = new List<string>()
     {
