@@ -32,6 +32,7 @@ public class Customer : Address
     public void ThankCustomer()
     {
         Console.WriteLine($"Thank you {_name}, for using our service!");
+        Console.WriteLine($"We will ship your order to {_address}, {_state}, {_country}");
         Console.WriteLine("Have a great day!");
         Console.WriteLine("- - - - - - - - - - - - - - - - -");
     }

@@ -4,7 +4,7 @@ using System.Xml;
 
 public class Order : Products
 {
-    public double _taxTotal;
+    double _taxTotal;
     double _shipping;
 
     public Order(double shipping)

@@ -38,7 +38,7 @@ public class Products
         }
     }
 
-    public void ItemsToBasket()
+    void ItemsToBasket()
     {
         Console.WriteLine("What would you like to add to your basket?");
         Console.Write("Enter the number of the item: ");
@@ -83,7 +83,7 @@ public class Products
             _howMany --;
         }
     }
-    public double AddToBasket()
+    protected double AddToBasket()
     {
         // I want this to add the numebr of items and the item from productInfo to basket
         while (_moreToOrder == true)

@@ -9,7 +9,7 @@ class Program
     {
         //Console.WriteLine("Hello Foundation2 World!");
         Products testing = new Products();
-        Customer customer1 = new Customer("xX_ELITE_SHOPPER_Xx", "1234 N Street AVE", "RI", "USA");
+        Customer customer1 = new Customer("xX_ELITE_SHOPPER_Xx", "1234 N Street AVE", "New York, NY", "USA");
         Address address = new Address("1234 N Street AVE", "RI", "USA");
         
         customer1.CheckCountry();
@@ -32,7 +32,7 @@ class Program
 
 
         
-        Customer customer2 = new Customer("John Smith", "1234 N Street AVE", "RI", "UAE");
+        Customer customer2 = new Customer("John Smith", "4321 World's Fair PKWY", "Dibai", "UAE");
         customer2.CheckCountry();
         customer2.GreetCustomer();
         if (Customer._inUSA == true)
